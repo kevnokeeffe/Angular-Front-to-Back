@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "devlogger": {
+    "clientpanel": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/devlogger",
+            "outputPath": "dist/clientpanel",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "devlogger:build"
+            "browserTarget": "clientpanel:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "devlogger:build:production"
+              "browserTarget": "clientpanel:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "devlogger:build"
+            "browserTarget": "clientpanel:build"
           }
         },
         "test": {
@@ -115,16 +115,20 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "devlogger:serve"
+            "devServerTarget": "clientpanel:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "devlogger:serve:production"
+              "devServerTarget": "clientpanel:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "devlogger"
+  "defaultProject": "clientpanel"
 }
