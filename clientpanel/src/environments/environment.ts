@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  firebase:{
   apiKey: "AIzaSyB6-zL0dlWtFon7O8OuGVwZiE57_G5vXEc",
   authDomain: "clientpanelprod-d112e.firebaseapp.com",
   projectId: "clientpanelprod-d112e",
@@ -11,6 +12,7 @@ export const environment = {
   messagingSenderId: "122790783174",
   appId: "1:122790783174:web:7c588a7903a6f0e0b84fc7",
   measurementId: "G-GYTM98M66H"
+}
 };
 
 /*
